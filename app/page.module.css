@@ -1,39 +1,11 @@
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 12px;
-
-    width: 350px;
-    height: 402px;
-    border-radius: 5px 0px 0px 0px;
-    border: 1px solid var(--frame-color);
-}
-
-.img {
-    width: 330px;
-    height: 200px;
-    border-radius: 5px;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;   
-}
-
-.subheading {
+.nav {
     display: flex;
     justify-content: space-between;
+    padding: 23px 10px;
 }
 
-.line {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
+.logo {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 54.47px;
 }
