@@ -16,10 +16,11 @@ a {
 
 :root {
   --black-color: #2C2C2C;
+  --white-color: #FFFFFF;
   --light-black-color: #4B4B4B;
   --gray-color: #6E6E6E;
   --primary-color: #1473E6;
-  --btn-color: #303030;
+  --button-color: #303030;
   --frame-color: #F5F5F5;
 
 
