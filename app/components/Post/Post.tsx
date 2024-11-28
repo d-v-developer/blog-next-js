@@ -6,7 +6,7 @@ import { Separator } from '../Separator/Separator';
 import { Like } from '../Like/Like';
 import { Heading } from '../Heading/Heading';
 import { Paragraph } from '../Paragraph/Paragraph';
-import { Link } from '../Link/Link';
+import { CustomLink } from '../CustomLink/CustomLink';
 import ArrowIcon from '../../../public/arrow.svg';
 
 export const Post = ({
@@ -45,9 +45,9 @@ export const Post = ({
 			</div>
 			<div className={styles.footer}>
 				<InfoText>{readingTime}</InfoText>
-				<Link href={url}>
+				<CustomLink href={url}>
 					Читать <ArrowIcon />
-				</Link>
+				</CustomLink>
 			</div>
 		</div>
 	);
