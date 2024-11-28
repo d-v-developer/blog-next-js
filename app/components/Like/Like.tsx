@@ -4,14 +4,14 @@ import styles from './Like.module.css';
 import cn from 'classnames';
 
 export const Like = ({
-  count,
-  className,
-  ...props
+	count,
+	className,
+	...props
 }: LikeProps): JSX.Element => {
-  return (
-    <div className={cn(styles.like, className)} {...props}>
-      {count}&nbsp;
-      <LikeIcon className={styles['like-icon']} />
-    </div>
-  );
+	return (
+		<div className={cn(styles.like, className)} {...props}>
+			{count}
+			<LikeIcon className={styles['like-icon']} />
+		</div>
+	);
 };
