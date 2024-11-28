@@ -1,29 +1,28 @@
-import { Heading } from './components/Heading/Heading';
-import { InfoText } from './components/InfoText/InfoText';
-import { Like } from './components/Like/Like';
-import { Separator } from './components/Separator/Separator';
-import styles from './page.module.css';
-import { Paragraph } from './components/Paragraph/Paragraph';
-import ArrowIcon from '../public/arrow.svg';
-import { Link } from './components/Link/Link';
 import { PostLike } from './components/PostLikeManager/PostLikeManager';
 import { Post } from './components/Post/Post';
+import { PostProps } from './components/Post/Post.props';
+import styles from './page.module.css';
 
 export default function Home(): JSX.Element {
 	return (
-		<>
-			<Post
-				image="mini.png"
-				category="Front-end"
-				published="1 месяц назад"
-				likes={4}
-				title="Как работать с CSS Grid"
-				body="Грид-раскладка (CSS Grid Layout) представляет собой
+		<div className={styles.posts}>
+			{[...Array(8)].map((p: PostProps, i: number) => {
+				return (
+					<Post
+						key={i}
+						image="mini.png"
+						category="Front-end"
+						published="1 месяц назад"
+						likes={4}
+						title="Как работать с CSS Grid"
+						body="Грид-раскладка (CSS Grid Layout) представляет собой
 							двумерную систему сеток в CSS. Гриды подойдут и для
 							верстки основных областей страницы.."
-				readingTime="3 минуты"
-			/>
+						readingTime="3 минуты"
+					/>
+				);
+			})}
 			<PostLike />
-		</>
+		</div>
 	);
 }

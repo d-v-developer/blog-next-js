@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import './globals.css';
+import { Navbar } from './components/Navbar/Navbar';
+import cn from 'classnames';
 import styles from './page.module.css';
-import GitHubIcon from '../public/github-icon.svg';
-import { Link } from './components/Link/Link';
 
 export const GITHUB_URL = 'https://github.com/d-v-developer';
 
@@ -24,18 +24,9 @@ export default function RootLayout({
 }>): JSX.Element {
 	return (
 		<html lang="ru">
-			<body className={inter.className}>
-				<nav className={styles.nav}>
-					<span className={styles.logo}>.my_blog</span>
-					<Link
-						href={GITHUB_URL}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<GitHubIcon />
-					</Link>
-				</nav>
-				{children}
+			<body className={cn(inter.className, styles.wrapper)}>
+				<Navbar className={styles.navbar} />
+				<div className={styles.body}>{children}</div>
 			</body>
 		</html>
 	);

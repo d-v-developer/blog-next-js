@@ -24,7 +24,7 @@ export const Post = ({
 			<div
 				className={styles.img}
 				style={{
-					backgroundImage: `${image}`,
+					backgroundImage: `url(./${image})`,
 					backgroundSize: 'cover',
 					backgroundRepeat: 'no-repeat',
 				}}
